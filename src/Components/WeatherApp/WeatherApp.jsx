@@ -30,7 +30,7 @@ const Input = styled.input`
   width: 362px;
   height: 78px;
   background: #ebfffc;
-  boder: none;
+  border: none;
   outline: none;
   border-radius: 40px;
   padding-left: 40px;
@@ -134,19 +134,37 @@ const WeatherApp = () => {
     temp[0].innerHTML = data.main.temp + " °C";
     location[0].innerHTML = data.name;
 
-    if (data.weather[0].icon == "01d" || data.weather[0].icon == "01n") {
+    if (data.weather[0].icon === "01d" || data.weather[0].icon === "01n") {
       setwicon(clear_icon);
-    } else if (data.weather[0].icon == "02d" || data.weather[0].icon == "02n") {
+    } else if (
+      data.weather[0].icon === "02d" ||
+      data.weather[0].icon === "02n"
+    ) {
       setwicon(cloud_icon);
-    } else if (data.weather[0].icon == "03d" || data.weather[0].icon == "03n") {
+    } else if (
+      data.weather[0].icon === "03d" ||
+      data.weather[0].icon === "03n"
+    ) {
       setwicon(drizzle_icon);
-    } else if (data.weather[0].icon == "04d" || data.weather[0].icon == "04n") {
+    } else if (
+      data.weather[0].icon === "04d" ||
+      data.weather[0].icon === "04n"
+    ) {
       setwicon(drizzle_icon);
-    } else if (data.weather[0].icon == "09d" || data.weather[0].icon == "09n") {
+    } else if (
+      data.weather[0].icon === "09d" ||
+      data.weather[0].icon === "09n"
+    ) {
       setwicon(rain_icon);
-    } else if (data.weather[0].icon == "10d" || data.weather[0].icon == "10n") {
+    } else if (
+      data.weather[0].icon === "10d" ||
+      data.weather[0].icon === "10n"
+    ) {
       setwicon(rain_icon);
-    } else if (data.weather[0].icon == "13d" || data.weather[0].icon == "13n") {
+    } else if (
+      data.weather[0].icon === "13d" ||
+      data.weather[0].icon === "13n"
+    ) {
       setwicon(snow_icon);
     } else {
       setwicon(clear_icon);
